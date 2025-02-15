@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Add Transaction</h2>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.amount.label }}<br>
+        {{ form.amount(size=32) }}
+    </div>
+    <div>
+        {{ form.category.label }}<br>
+        {{ form.category }}
+    </div>
+    <div>
+        {{ form.date.label }}<br>
+        {{ form.date }}
+    </div>
+    <div>
+        {{ form.description.label }}<br>
+        {{ form.description(size=32) }}
+    </div>
+    <div>
+        {{ form.submit() }}
+    </div>
+</form>
+{% endblock %}
